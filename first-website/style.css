@@ -1,0 +1,15 @@
+html{
+    background-color:blueviolet;
+}
+
+p {
+    color:cornflowerblue;
+    font-size:30px;
+    background-color: rgb(0,0,255);
+    border: 5px solid red
+}
+
+h1 {
+    color: darkslateblue;
+    text-decoration:line-through;
+}
