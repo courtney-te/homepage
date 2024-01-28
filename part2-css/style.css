@@ -1,0 +1,35 @@
+html{
+    background-color:#F8C596;
+    color:#FC5D9D;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-top:250px;
+}
+
+h1 {
+    font-size:25px;
+    text-align: center;
+    border: 2px dotted #FC5D9D;
+    padding-top: 25px;
+    width: 200px;
+    height: 110px;
+    margin-left: 43%;
+    border-radius: 30px;
+}
+
+#main-content {
+    visibility: hidden;
+}
+
+h2 {
+    text-align:center;
+    font-size:18px;
+}
+
+h3 {
+    padding-top:30px;
+}
+
+p {
+    text-align:center;
+}
+
