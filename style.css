@@ -6,7 +6,6 @@ html, body {
 p {
     font-family:Arial, Helvetica, sans-serif;
     font-size:14px;
-    text-align:center;
     color:rgb(231, 231, 103);
 }
 
@@ -83,4 +82,18 @@ h1:hover {
     font-size:25px;
     text-align:center;
     margin:auto;
+  }
+
+ a {
+    text-decoration:none;
+    color: yellow;
+ }
+
+ a:hover {
+    color: rgb(187, 44, 115);
+  }
+
+  marquee {
+    width:350px;
+    text-align:center;
   }
