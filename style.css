@@ -94,6 +94,8 @@ h1:hover {
   }
 
   marquee {
-    width:350px;
-    text-align:center;
+    width:310px;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
   }
