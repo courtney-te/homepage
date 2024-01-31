@@ -1,10 +1,10 @@
 html, body {
-    cursor: url("cursor.png"), default;
+  font-family:Arial, Helvetica, sans-serif;  
+  cursor: url("cursor.png"), default;
     background-color:hotpink
 }
 
 p {
-    font-family:Arial, Helvetica, sans-serif;
     font-size:14px;
     color:rgb(231, 231, 103);
 }
@@ -15,7 +15,6 @@ ul {
 }
 
 h1 {
-    font-family:Arial, Helvetica, sans-serif;
     text-align:center;
     color:yellow;
 }
@@ -98,4 +97,8 @@ h1:hover {
     padding:0px;
     margin:0px;
     box-sizing: border-box;
+  }
+
+  button {
+    margin:auto;
   }

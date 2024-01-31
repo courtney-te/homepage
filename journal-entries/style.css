@@ -1,0 +1,41 @@
+html {
+    background-color:hotpink;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+h1:hover {
+    color:yellow;
+}
+
+.entries {
+    font-size:15px;
+    width:200px;
+    padding:100px;
+    color:rgb(143, 28, 85);
+}
+
+a {
+    color:rgb(143, 28, 85);
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+    color: yellow;
+  }
+
+p:hover {
+    color:yellow;
+}
+
+button {
+    color:yellow;
+    background-color: hotpink;
+    border-style:inset;
+}
+

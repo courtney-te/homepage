@@ -13,3 +13,9 @@ h1 {
     color: darkslateblue;
     text-decoration:line-through;
 }
+
+button {
+    color:yellow;
+    background-color: hotpink;
+    border-style:inset;
+}

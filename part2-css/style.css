@@ -33,3 +33,9 @@ p {
     text-align:center;
 }
 
+button {
+    color:yellow;
+    background-color: hotpink;
+    border-style:inset;
+}
+
