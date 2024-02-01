@@ -1,0 +1,15 @@
+html {
+    background-color:hotpink;
+}
+
+button {
+    color:yellow;
+    background-color: hotpink;
+    border-style:inset;
+}
+
+p {
+    width:300px;
+    padding:5%;
+    margin:auto;
+}
