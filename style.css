@@ -102,3 +102,7 @@ h1:hover {
   button {
     margin:auto;
   }
+
+  .marquee-top {
+    background-color:red;
+  }
