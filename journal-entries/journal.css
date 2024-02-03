@@ -12,11 +12,12 @@ h1:hover {
     color:yellow;
 }
 
-.entries {
+.entry-1 {
     font-size:15px;
     width:200px;
     padding:100px;
     color:rgb(143, 28, 85);
+    left:0;
 }
 
 a {
@@ -26,12 +27,8 @@ a {
 
 a:hover {
     text-decoration:underline;
-    color: yellow;
   }
 
-p:hover {
-    color:yellow;
-}
 
 button {
     color:yellow;
@@ -39,3 +36,19 @@ button {
     border-style:inset;
 }
 
+.entries {
+    position:relative;
+}
+
+.entry-1, .entry-2 {
+    position:absolute;
+  }
+
+  .entry-2 {
+    font-size:15px;
+    width:200px;
+    padding:100px;
+    color:rgb(143, 28, 85);
+    right:0;
+    left:300px;
+}

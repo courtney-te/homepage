@@ -61,3 +61,7 @@ button {
     position:absolute;
     bottom:30px;
 }
+
+.center {
+    padding-top:250px;
+}
