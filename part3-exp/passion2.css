@@ -1,0 +1,80 @@
+html, body {
+    background-color:hotpink;
+    font-family:'DM Sans', sans-serif;
+}
+
+button {
+    color:yellow;
+    background-color: hotpink;
+    border-style:inset;
+    margin-top:35px;
+}
+
+p {
+    width:300px;
+    font-size:17px;
+}
+
+h1 {
+    font-size:30px;
+    text-align:center;
+    background-color: #F8C596;
+    border-radius: 10px;
+    padding: 20px;
+    width:96.7%;
+  margin: 0 auto;
+    
+}
+
+h2 {
+    text-align:center;
+    font-size:15px;
+}
+
+.box {
+    border: 2px solid #333;
+    width:auto;
+    border-radius: 10px;
+    margin:0 auto;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    overflow:auto;
+  }
+
+.description, .members {
+    flex: 1;
+  }
+
+.description {
+    padding-top:50px;
+    padding-left:50px;
+    height:575px;
+    overflow-y: auto;
+}
+
+.members {
+    margin-top:40px;
+    padding-left:25px;
+    height:575px;
+    width:300px;
+    margin-right:100px;
+    overflow-y: auto;
+    border: 4px dotted #F8C596;
+}
+
+
+li:hover {
+    color:#F8C596;
+}
+
+h4 {
+    font-size:20px;
+    color:#F8C596
+}
+
+h3 {
+    font-size:30px;
+}
