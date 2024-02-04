@@ -20,7 +20,7 @@ h1 {
 }
 
 .computer {
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
@@ -110,4 +110,9 @@ h1:hover {
 .omg {
   bottom:0;
   position:absolute;
+}
+
+.whole{
+  color:red;
+  margin-top:100px;
 }
