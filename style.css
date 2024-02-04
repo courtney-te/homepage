@@ -106,4 +106,8 @@ h1:hover {
   .marquee-top {
     background-color:red;
   }
-  
+
+.omg {
+  bottom:0;
+  position:absolute;
+}
