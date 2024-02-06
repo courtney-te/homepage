@@ -4,10 +4,8 @@ html, body {
 }
 
 button {
-    color:yellow;
     background-color: hotpink;
     border-style:inset;
-    margin-top:35px;
 }
 
 p {
@@ -83,4 +81,47 @@ h4 {
 h3 {
     font-size:30px;
     margin-top:10px;
+}
+
+.audio-player {
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position:absolute;
+    bottom:10px;
+    right:10px; 
+}
+
+/* Minimal styles for the audio controls */
+.audio-controls button {
+    padding: 5px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+}
+
+button {
+    font-family:'DM Sans', sans-serif;
+    border:1.5px solid rgb(193, 34, 113);
+    background-color:white;
+}
+
+.musicplayer {
+  position:absolute;
+  bottom:20px;
+  right:20px;
+}
+
+select {
+    font-family:'DM Sans', sans-serif;
+}
+
+button:hover {
+  text-decoration: underline;
+  font-style:italic;
 }

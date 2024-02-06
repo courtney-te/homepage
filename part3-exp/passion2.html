@@ -8,6 +8,24 @@
   <link rel="icon" type="png" href="logo.png">
     </head>
     <body>
+        <div class="musicplayer">
+            <select id="songSelect">
+              <option value="feelspecial.mp3">feel special</option>
+              <option value="setmefree.mp3">set me free</option>
+              <option value="cheerup.mp3">cheer up</option>
+      
+              <!-- Add more options for additional songs -->
+          </select>
+          
+          <audio id="myAudio">
+              <source id="audioSource" type="audio/mpeg">
+              Your browser does not support the audio element.
+          </audio>
+      
+      <button onclick="playAudio()">play</button>
+      <button onclick="pauseAudio()">pause</button>
+      <button onclick="stopAudio()">stop</button>
+      </div>
         <div class="box"><h1><b>~ INTRODUCING TWICE (트와이스) ~</b></h1></div>
         <h2>(aka my favorite girl group of all time)</h2>
         <div class="container">
@@ -144,6 +162,33 @@
                     <li>born jun 14, 1999</li>
                     <li>literally shy shy shy</li> 
                 </ul></div></div>
-        <button onclick="window.history.back()">Back</button> 
+        <button style="position:absolute;bottom:10px;" onclick="window.history.back()">Back</button> 
+
+        <script>    
+        var audio = document.getElementById("myAudio");
+var audioSource = document.getElementById("audioSource");
+var songSelect = document.getElementById("songSelect");
+
+// Set the initial volume (0.5 for example, adjust as needed)
+audio.volume = 0.5;
+
+function playAudio() {
+  audio.play();
+}
+
+function pauseAudio() {
+  audio.pause();
+}
+
+function stopAudio() {
+  audio.pause();
+  audio.currentTime = 0;
+}
+
+songSelect.addEventListener("change", function() {
+  audioSource.src = songSelect.value;
+  audio.load();
+});
+            </script>
     </body>
 </html>
