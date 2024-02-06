@@ -40,8 +40,8 @@ h2 {
 
 .container {
     display: flex;
-    gap: 20px;
     overflow:auto;
+    gap:20px;
   }
 
 .description, .members {
@@ -49,20 +49,25 @@ h2 {
   }
 
 .description {
-    padding-top:50px;
+    margin-top:50px;
     padding-left:50px;
-    height:575px;
+    height:460px;
     overflow-y: auto;
 }
 
 .members {
     margin-top:40px;
-    padding-left:25px;
-    height:575px;
+    padding-top:0;
+    height:85%;
     width:300px;
     margin-right:100px;
-    overflow-y: auto;
+    padding-left:10px;
     border: 4px dotted #F8C596;
+    width: 300px; /* Adjust width as needed */
+        height: 450px; /* Adjust height as needed */
+        overflow: auto; /* This makes the div scrollable */
+        padding: 10px;
+        text-align:center;
 }
 
 
@@ -77,4 +82,5 @@ h4 {
 
 h3 {
     font-size:30px;
+    margin-top:10px;
 }
