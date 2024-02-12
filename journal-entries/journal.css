@@ -52,3 +52,18 @@ button {
     right:0;
     left:300px;
 }
+
+.entry-3 {
+    font-size:15px;
+    width:200px;
+    padding:100px;
+    color:rgb(143, 28, 85);
+    right:0;
+    margin-left:600px;
+}
+
+ button {
+    background-color:green;
+    color:black;
+    border:none;
+ }

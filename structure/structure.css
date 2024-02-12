@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+    margin:10px;
+    margin-left:40px;
+    margin-top:40px;
+}
+
+body {
+    background: linear-gradient(to bottom, #93C572, #74aa50);
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height:100%;
+}
+
+.grid-item {
+    flex: 0 0 10%; /* Each column takes up 10% of the container width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 150px;
+    height:150px;
+}
+
+.grid-item img {
+    width:10vh; /* Set the width of the image to 100% of its container */
+    height: auto;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+}
+
+.grid-item.rotate img {
+    transform: rotate(360deg); /* Rotate the image by 360 degrees */
+}
+
+.grid-item img {
+    transition: transform 0.3s ease; /* Add transition for smooth rotation */
+}
+
+.grid-item:hover img {
+    transform: rotate(360deg); /* Rotate the image by 360 degrees */
+}
+
+.text {
+    text-align:center;
+    margin-bottom:40px;
+    font-family: "antonia-variable", sans-serif;
+font-variation-settings: "opsz" 8, "wght" 300;
+}
+
+button {
+    background-color:rgb(102, 130, 102);
+    color:white;
+    border:1px solid green;
+ }
