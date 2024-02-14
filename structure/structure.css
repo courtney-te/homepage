@@ -2,11 +2,11 @@ body, html {
     height: 100%;
     margin:10px;
     margin-left:40px;
-    margin-top:40px;
+    cursor:url('sun.png');
 }
 
 body {
-    background: linear-gradient(to bottom, #93C572, #74aa50);
+    background-color:#92C370;
 }
 
 .grid-container {
@@ -19,13 +19,12 @@ body {
 .grid-item {
     flex: 0 0 10%; /* Each column takes up 10% of the container width */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    width: 150px;
+    width:150px;
     height:150px;
 }
 
 .grid-item img {
     width:10vh; /* Set the width of the image to 100% of its container */
-    height: auto;
     overflow: hidden; /* Ensure the image doesn't overflow */
 }
 
@@ -53,3 +52,8 @@ button {
     color:white;
     border:1px solid green;
  }
+
+ 
+ .custom-cursor {
+    cursor: url('sun.png'), auto;
+}
