@@ -97,18 +97,25 @@
     <script>
 
 document.addEventListener("DOMContentLoaded", function() {
-    var gridItems = document.querySelectorAll('.grid-item');
+            var gridItems = document.querySelectorAll('.grid-item');
 
-    gridItems.forEach(function(item) {
-        item.addEventListener('mouseover', function() {
-            this.classList.add('rotate');
-        });
+            gridItems.forEach(function(item) {
+                item.addEventListener('mouseover', function(event) {
+                    var rect = this.getBoundingClientRect();
+                    var x = event.clientX - rect.left;
+                    var y = event.clientY - rect.top;
+                    var centerX = rect.width / 2;
+                    var centerY = rect.height / 2;
+                    var angleX = -(y - centerY) / 10;
+                    var angleY = (x - centerX) / 10;
+                    this.style.transform = 'perspective(1000px) rotateX(' + angleX + 'deg) rotateY(' + angleY + 'deg)';
+                });
 
-        item.addEventListener('mouseout', function() {
-            this.classList.remove('rotate');
+                item.addEventListener('mouseout', function() {
+                    this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
+                });
+            });
         });
-    });
-});
 
 
     </script>
