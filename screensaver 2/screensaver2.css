@@ -1,0 +1,99 @@
+body {
+        font-family: "p22-frenzy", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    width:100vw;
+    height:100vh;
+    overflow-y:hidden;
+    margin:0;
+    padding:0;
+    background-color:rgb(194, 238, 253);
+}
+
+
+@keyframes leftright {
+    0% {
+        left:-20vw;
+    }
+    100% {
+        left:100vw;
+    }
+}
+
+
+.container {
+    display:flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Ensures the container takes full viewport height */
+    width:100vw;
+    z-index:-1;
+  }
+  
+  .centered {
+    /* Additional styling for your centered div */
+  }
+
+  .car img {
+    width:300px;
+    height:auto;
+    z-index:-1;
+  }
+
+.car {
+    z-index:2;
+}
+
+  .wheel img {
+    position:absolute;
+    width:50px;
+    bottom:100px;
+    margin-left:45px;
+    animation:rotate 3s infinite linear;
+    transform-origin: middle;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; 
+    z-index:1;
+  }
+
+  @keyframes rotate {
+    0% {transform:rotate(0deg)}
+    100% {transform:rotate(360deg)}
+  }
+  
+  .wheel {
+    position: relative;
+    display: flex; /* or grid, depending on your layout */
+  }
+
+  .road {
+    position:relative;
+    display:flex;
+    gap:none;
+    margin:0;
+    animation:moving 5s infinite linear forwards;
+  }
+
+  .road img {
+    position:absolute;
+    width:400%;
+    height:100px;
+    left:0;
+    bottom: 270px;
+    margin:0;
+  }
+  
+@keyframes moving {
+    0% {left:0vw;}
+    100% {left:-100vw;}
+}
+
+#w2 {
+    margin-left:192px;
+}
+
+.cover {
+    position:absolute;
+    height:100vh;
+    z-index:2;
+}
