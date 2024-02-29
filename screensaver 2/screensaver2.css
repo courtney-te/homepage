@@ -73,7 +73,7 @@ body {
     display:flex;
     gap:none;
     margin:0;
-    animation:moving 3.5s infinite linear;
+    animation:moving 3s infinite linear;
   }
 
   .road img {
@@ -98,4 +98,23 @@ body {
     position:absolute;
     height:100vh;
     z-index:2;
+}
+
+.scene img {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  width:100vw;
+  height:65vh;
+  z-index:-1;
+}
+
+.bottom {
+  position:absolute;
+  width:100vw;
+  height:35vh;
+  background-color:#72dcbb;
+  bottom:0;
+  z-index:-1;
 }
