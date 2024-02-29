@@ -7,8 +7,19 @@ body {
     overflow-y:hidden;
     margin:0;
     padding:0;
-    background-color:rgb(187, 236, 255);
+    animation: fadeInAnimation 2s ease-in forwards;
+
 }
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0; /* Start from fully transparent */
+  }
+  to {
+    opacity: 1; /* End with fully opaque */
+  }
+}
+
 
 
 @keyframes leftright {
