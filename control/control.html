@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>title</title>
+        <link rel="stylesheet" href="control.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="buttons">
+             <button id="changeCursorBtn">cursor</button>
+             <button id="changeColorBtn" onclick="changeBackgroundColors()">bg color</button>
+             <button id="refreshButton">refresh</button>
+            </div>
+            <div id="avoidanceDiv"></div>
+            <div id="avoidanceDiv2"></div>
+         </div>
+         <div id="message">they touched!</div>
+        <script>
+// Define an array of custom cursor URLs
+// Define an array of custom cursor URLs
+var customCursors = [
+    '1.png',
+    '2.png',
+    '3.png',
+    '4.png',
+    '5.png',
+    '6.png',
+    '7.png',
+    '8.png',
+    '9.png',
+    '10.png',
+    '11.png',
+    '12.png',
+    '13.png',
+    '14.png',
+    '15.png'
+];
+
+// Shuffle function to shuffle the customCursors array
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
+}
+
+// Shuffled array of custom cursors
+var shuffledCursors = shuffleArray(customCursors);
+
+// Initialize cursor index
+var cursorIndex = 0;
+
+// Function to change the cursor
+function changeCursor() {
+    var body = document.body;
+    var html = document.documentElement;
+    // Set a cursor URL from the shuffled array for both body and html elements
+    body.style.cursor = html.style.cursor = 'url(' + shuffledCursors[cursorIndex] + '), auto';
+    // Increment cursor index
+    cursorIndex = (cursorIndex + 1) % shuffledCursors.length;
+    // If cursor index reaches the end, reshuffle the array
+    if (cursorIndex === 0) {
+        shuffledCursors = shuffleArray(customCursors);
+    }
+}
+
+// Add event listener to the button
+document.getElementById('changeCursorBtn').addEventListener('click', changeCursor);
+
+// Call changeCursor initially to set the default cursor
+changeCursor();
+
+function changeBackgroundColors() {
+    // Generate random hex color code
+    function getRandomColor() {
+        return '#' + Math.floor(Math.random()*16777215).toString(16);
+    }
+
+    // Get HTML and body elements
+    var htmlElement = document.documentElement;
+    var bodyElement = document.body;
+
+    // Set new background colors
+    var newColor = getRandomColor();
+    htmlElement.style.backgroundColor = newColor;
+    bodyElement.style.backgroundColor = newColor;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    var avoidanceDiv = document.getElementById("avoidanceDiv");
+    var avoidanceDiv2 = document.getElementById("avoidanceDiv2");
+    var message = document.getElementById("message");
+    var audio = new Audio('1.mp3'); // Replace 'audio_clip.mp3' with the path to your audio file
+    var audioPlayed = false; // Track whether audio has been played
+
+    document.addEventListener("mousemove", function(event) {
+        var x = event.clientX;
+        var y = event.clientY;
+
+        // Calculate distance between cursor and center of the div
+        var divRect1 = avoidanceDiv.getBoundingClientRect();
+        var divRect2 = avoidanceDiv2.getBoundingClientRect();
+        var divCenterX1 = divRect1.left + divRect1.width / 2;
+        var divCenterY1 = divRect1.top + divRect1.height / 2;
+        var divCenterX2 = divRect2.left + divRect2.width / 2;
+        var divCenterY2 = divRect2.top + divRect2.height / 2;
+        var distance1 = Math.sqrt(Math.pow(x - divCenterX1, 2) + Math.pow(y - divCenterY1, 2));
+        var distance2 = Math.sqrt(Math.pow(x - divCenterX2, 2) + Math.pow(y - divCenterY2, 2));
+
+        // Define maximum distance for div movement
+        var maxDistance = 100;
+
+        // Move the divs away from the cursor if they get too close
+        if (distance1 < maxDistance) {
+            var angle1 = Math.atan2(y - divCenterY1, x - divCenterX1);
+            var newX1 = divCenterX1 - maxDistance * Math.cos(angle1);
+            var newY1 = divCenterY1 - maxDistance * Math.sin(angle1);
+            avoidanceDiv.style.left = newX1 + "px";
+            avoidanceDiv.style.top = newY1 + "px";
+        }
+
+        if (distance2 < maxDistance) {
+            var angle2 = Math.atan2(y - divCenterY2, x - divCenterX2);
+            var newX2 = divCenterX2 - maxDistance * Math.cos(angle2);
+            var newY2 = divCenterY2 - maxDistance * Math.sin(angle2);
+            avoidanceDiv2.style.left = newX2 + "px";
+            avoidanceDiv2.style.top = newY2 + "px";
+        }
+
+        // Check for overlapping or touching
+        if (!(divRect1.right < divRect2.left || 
+              divRect1.left > divRect2.right || 
+              divRect1.bottom < divRect2.top || 
+              divRect1.top > divRect2.bottom)) {
+            message.style.opacity = 1; // Show the message
+            if (!audioPlayed) {
+                audio.play(); // Play the audio clip if it's not already playing
+                audioPlayed = true; // Set the flag to true to indicate audio has been played
+            }
+        } else {
+            message.style.opacity = 0; // Hide the message if not touching
+            if (audioPlayed) {
+                audio.pause(); // Pause the audio clip if it's playing
+                audio.currentTime = 0; // Reset audio clip to the beginning
+                audioPlayed = false; // Reset the flag
+            }
+        }
+    });
+});
+
+document.getElementById('refreshButton').addEventListener('click', function() {
+    location.reload(); // Reload the page
+});
+
+        </script>
+    </body>
+</html>

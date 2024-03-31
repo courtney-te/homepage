@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width:100%;}
+
+body, html {
+        cursor: default;
+        background-color:gray;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin:25px;
+}
+
+/* CSS for the button */
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+html, body {
+    background-color: #f0f0f0; /* Light gray */
+}
+
+#avoidanceDiv {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:0%;
+    bottom:0;
+    background-color: blue;
+    pointer-events: none; /* Makes the div non-interactive to cursor events */
+    transition: top 0.1s ease-out, left 0.1s ease-out;
+    border-radius:50px;
+}
+
+#avoidanceDiv2 {
+    border-radius:50px;
+    width: 100px;
+    height: 100px;
+    background-color: red; /* Change background color */
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    pointer-events: none; /* Makes the div non-interactive to cursor events */
+    transition: top 0.1s ease-out, left 0.1s ease-out; /* Smooth transition for movement */
+}
+
+        /* CSS for the message */
+        #message {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgb(255, 255, 255);
+            border:black 2px solid;
+            color: black;
+            padding: 20px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }

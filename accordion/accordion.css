@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: "aktiv-grotesk-georgian", sans-serif;
+font-weight: 300;
+font-style: normal;
+background-color: azure;
+}
+
+.picture img {
+    content:url('cat 5.jpeg');
+    max-width:300px;
+    min-width:100px;
+    height:auto;
+    border-radius:20px;
+    border:5px white solid;
+}
+
+.text {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* 100% of the viewport height */
+}
+
+@media screen and (max-width: 1200px) {
+    .text::before {
+        content: "please...?";
+    }
+    .picture img {
+        content:url('cat 4.jpeg');
+        max-width:300px;
+        animation: changeToImage 0.5s forwards;
+    }
+    body {
+        background-color:rgb(249, 236, 236);
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .text::before {
+        content: "bro come on!";
+    }
+    .picture img {
+        content:url('cat 3.jpeg');
+        width:50px;
+        animation: changeToImage 0.5s forwards;
+    }
+    body {
+        background-color:rgb(237, 191, 191);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .text::before {
+        content: "BROOOOOO";
+    }
+    .picture img {
+        content:url('cat 2.jpeg');
+        width:50px;
+        animation: changeToImage 0.5s forwards;
+    }
+    body {
+        background-color:rgb(237, 133, 133);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .text::before {
+        content: "bye";
+    }
+    .picture img {
+        content:url('cat 1.jpeg');
+        width:50px;
+        animation: changeToImage 0.5s forwards;
+    }
+    body {
+        background-color:rgb(218, 64, 64);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .text::before {
+        content: "hey pal, you got any food?";
+    }
+    
+}
+
+@keyframes changeToImage {
+    from {
+        background-image: none; /* Start with no background image */
+        color: black; /* Start with text */
+    }
+    to {
+        background-image: url('small_image.jpg'); /* End with background image */
+        color: transparent; /* End with no text */
+    }
+}
