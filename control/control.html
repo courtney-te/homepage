@@ -3,18 +3,25 @@
     <head>
         <title>title</title>
         <link rel="stylesheet" href="control.css">
+        <link rel="stylesheet" href="https://use.typekit.net/slm6afl.css">
+        <link rel="stylesheet" href="https://use.typekit.net/wjx4uac.css">
     </head>
     <body>
         <div class="container">
             <div class="buttons">
+                <button id="refreshButton">refresh</button>
              <button id="changeCursorBtn">cursor</button>
              <button id="changeColorBtn" onclick="changeBackgroundColors()">bg color</button>
-             <button id="refreshButton">refresh</button>
             </div>
+            <div class="text">try to get them to touch!</div>
             <div id="avoidanceDiv"></div>
             <div id="avoidanceDiv2"></div>
          </div>
-         <div id="message">they touched!</div>
+         <div id="message">
+            congrats! they touched!
+            <br><br>
+            <a href="https://yeonskie.github.io/homepage/control/control.html">play again?</a>
+        </div>
         <script>
 // Define an array of custom cursor URLs
 // Define an array of custom cursor URLs
@@ -111,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var distance2 = Math.sqrt(Math.pow(x - divCenterX2, 2) + Math.pow(y - divCenterY2, 2));
 
         // Define maximum distance for div movement
-        var maxDistance = 100;
+        var maxDistance = 50;
 
         // Move the divs away from the cursor if they get too close
         if (distance1 < maxDistance) {

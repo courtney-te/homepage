@@ -7,9 +7,12 @@ img {
 
 body, html {
         cursor: default;
-        background-color:gray;
+        background-color:bisque;
         overflow-y:none;
         height:100vh;
+        font-family: "edding-780", sans-serif;
+        font-weight: 400;
+        font-style: normal;
 }
 
 .container {
@@ -23,7 +26,7 @@ body, html {
 .buttons {
     position: absolute;
     top:0%;
-    left: 50%;
+    left: 5%;
     transform: translate(-50%, -50%);
 }
 
@@ -69,3 +72,18 @@ html, body {
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
+
+.text {
+    text-align:center;
+    font-size:20px;
+}
+
+button {
+    font-family: "cc-dynamic-duo-open-variable", sans-serif;
+    font-variation-settings: "ital" 0, "wght" 400;
+    font-size:25px;
+}
+
+.message {
+    text-align:center;
+}
